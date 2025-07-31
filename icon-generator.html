@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <h1>Chrome Extension Icon Generator</h1>
+    <canvas id="iconCanvas" width="128" height="128" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadIcon()">Download PNG Icon</button>
+
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw the icon
+        function drawIcon() {
+            // Clear canvas
+            ctx.clearRect(0, 0, 128, 128);
+            
+            // Background circle
+            ctx.fillStyle = '#4285F4';
+            ctx.beginPath();
+            ctx.arc(64, 64, 60, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Border
+            ctx.strokeStyle = '#1a73e8';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Enter key symbol
+            ctx.fillStyle = 'white';
+            ctx.fillRect(20, 40, 40, 12);
+            ctx.fillRect(20, 40, 12, 32);
+            
+            // Arrow
+            ctx.beginPath();
+            ctx.moveTo(72, 45);
+            ctx.lineTo(100, 45);
+            ctx.lineTo(100, 55);
+            ctx.lineTo(95, 50);
+            ctx.lineTo(100, 45);
+            ctx.lineTo(100, 55);
+            ctx.lineTo(85, 55);
+            ctx.lineTo(85, 75);
+            ctx.lineTo(72, 75);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Text lines
+            ctx.globalAlpha = 0.8;
+            ctx.fillRect(20, 85, 35, 3);
+            ctx.fillRect(60, 85, 25, 3);
+            ctx.fillRect(20, 95, 45, 3);
+            ctx.fillRect(70, 95, 20, 3);
+            ctx.globalAlpha = 1.0;
+        }
+
+        function downloadIcon() {
+            const link = document.createElement('a');
+            link.download = 'icon128.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw the icon when page loads
+        drawIcon();
+    </script>
+</body>
+</html>

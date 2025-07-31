@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#4285F4" stroke="#1a73e8" stroke-width="2"/>
+  
+  <!-- Enter key symbol -->
+  <rect x="20" y="40" width="40" height="12" rx="2" fill="white"/>
+  <rect x="20" y="40" width="12" height="32" rx="2" fill="white"/>
+  
+  <!-- Arrow indicating line break -->
+  <path d="M72 45 L100 45 L100 55 L95 50 L100 45 L100 55 L85 55 L85 75 L72 75 Z" fill="white"/>
+  
+  <!-- Text lines representing newlines -->
+  <rect x="20" y="85" width="35" height="3" fill="white" opacity="0.8"/>
+  <rect x="60" y="85" width="25" height="3" fill="white" opacity="0.8"/>
+  <rect x="20" y="95" width="45" height="3" fill="white" opacity="0.8"/>
+  <rect x="70" y="95" width="20" height="3" fill="white" opacity="0.8"/>
+</svg>
