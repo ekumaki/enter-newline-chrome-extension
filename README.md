@@ -14,12 +14,26 @@ ChatGPT Web版でのEnterキー誤送信を防ぐChrome拡張機能です。
 
 ## インストール方法
 
-### 開発者モードでのインストール
+### GitHubリリースから（推奨）
 
-1. Chromeで `chrome://extensions/` を開く
-2. 右上の「デベロッパーモード」をオンにする
-3. 「パッケージ化されていない拡張機能を読み込む」をクリック
-4. このフォルダを選択する
+1. [Releases](https://github.com/ekumaki/enter-newline-chrome-extension/releases)から最新の `enter-newline-chrome-extension-v*.zip` をダウンロード
+2. zipファイルを任意のフォルダに解凍
+3. Chromeで `chrome://extensions/` を開く
+4. 右上の「デベロッパーモード」をオンにする
+5. 「パッケージ化されていない拡張機能を読み込む」をクリック
+6. 解凍したフォルダを選択する
+7. chatgpt.comで拡張機能が有効になります
+
+### 開発者モードでのインストール（ソースから）
+
+1. このリポジトリをクローン:
+   ```bash
+   git clone https://github.com/ekumaki/enter-newline-chrome-extension.git
+   ```
+2. Chromeで `chrome://extensions/` を開く
+3. 右上の「デベロッパーモード」をオンにする
+4. 「パッケージ化されていない拡張機能を読み込む」をクリック
+5. クローンしたフォルダを選択する
 
 ### アイコン生成（オプション）
 
